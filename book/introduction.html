@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="sidebar-visible no-js ayu">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -29,6 +29,8 @@
 
         <!-- Custom theme stylesheets -->
         
+        <link rel="stylesheet" href="custom.css">
+        
 
         
     </head>
@@ -36,7 +38,7 @@
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -62,7 +64,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('light')
+            html.classList.remove('ayu')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -80,8 +82,8 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
-                <ol class="chapter"><li class="expanded affix "><a href="introduction.html" class="active">Intermodal</a></li><li class="expanded "><a href="bep-support.html"><strong aria-hidden="true">1.</strong> BitTorrent BEP Support</a></li><li class="expanded "><a href="prior-art.html"><strong aria-hidden="true">2.</strong> Alternatives &amp; Prior Art</a></li><li class="expanded "><a href="bittorrent-references.html"><strong aria-hidden="true">3.</strong> BitTorrent References</a></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html" class="active">Intermodal</a></li><li class="chapter-item expanded "><a href="faq.html"><strong aria-hidden="true">1.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="commands.html"><strong aria-hidden="true">2.</strong> Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="commands/imdl.html"><strong aria-hidden="true">2.1.</strong> imdl</a></li><li class="chapter-item expanded "><a href="commands/imdl-completions.html"><strong aria-hidden="true">2.2.</strong> imdl completions</a></li><li class="chapter-item expanded "><a href="commands/imdl-torrent.html"><strong aria-hidden="true">2.3.</strong> imdl torrent</a></li><li class="chapter-item expanded "><a href="commands/imdl-torrent-create.html"><strong aria-hidden="true">2.4.</strong> imdl torrent create</a></li><li class="chapter-item expanded "><a href="commands/imdl-torrent-link.html"><strong aria-hidden="true">2.5.</strong> imdl torrent link</a></li><li class="chapter-item expanded "><a href="commands/imdl-torrent-piece-length.html"><strong aria-hidden="true">2.6.</strong> imdl torrent piece-length</a></li><li class="chapter-item expanded "><a href="commands/imdl-torrent-show.html"><strong aria-hidden="true">2.7.</strong> imdl torrent show</a></li><li class="chapter-item expanded "><a href="commands/imdl-torrent-stats.html"><strong aria-hidden="true">2.8.</strong> imdl torrent stats</a></li><li class="chapter-item expanded "><a href="commands/imdl-torrent-verify.html"><strong aria-hidden="true">2.9.</strong> imdl torrent verify</a></li></ol></li><li class="chapter-item expanded "><a href="bittorrent.html"><strong aria-hidden="true">3.</strong> Bittorrent</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="bittorrent/piece-length-selection.html"><strong aria-hidden="true">3.1.</strong> Piece Length Selection</a></li><li class="chapter-item expanded "><a href="bittorrent/bep-support.html"><strong aria-hidden="true">3.2.</strong> BEP Support</a></li><li class="chapter-item expanded "><a href="bittorrent/metainfo-utilities.html"><strong aria-hidden="true">3.3.</strong> Metainfo Utilities</a></li><li class="chapter-item expanded "><a href="bittorrent/distributing-large-data-sets.html"><strong aria-hidden="true">3.4.</strong> Distributing Large Data Sets</a></li><li class="chapter-item expanded "><a href="bittorrent/udp-tracker-protocol.html"><strong aria-hidden="true">3.5.</strong> UDP Tracker Protocol</a></li></ol></li><li class="chapter-item expanded "><a href="references.html"><strong aria-hidden="true">4.</strong> References</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="references/bittorrent.html"><strong aria-hidden="true">4.1.</strong> BitTorrent</a></li><li class="chapter-item expanded "><a href="references/metadata.html"><strong aria-hidden="true">4.2.</strong> Metadata</a></li><li class="chapter-item expanded "><a href="references/cryptography.html"><strong aria-hidden="true">4.3.</strong> Cryptography</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -100,11 +102,11 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
                         </ul>
                         
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
@@ -118,6 +120,10 @@
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        <a href="https://github.com/casey/intermodal" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                         
                     </div>
@@ -147,24 +153,36 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#intermodal" id="intermodal">Intermodal</a></h1>
-<p>Intermodal is, as the moment, a BitTorrent metainfo utility. The binary is called <code>imdl</code>.</p>
-<p>Project development is hosted on GitHub at <a href="https://github.com/casey/intermodal">github.com/casey/intermodal</a>.</p>
-<p>Intermodal can be used to create <code>.torrent</code> files:</p>
-<pre><code>$ imdl torrent create --input foo
+                        <h1><a class="header" href="#intermodal-a-40-shipping-container-for-the-internet" id="intermodal-a-40-shipping-container-for-the-internet">Intermodal: A 40’ shipping container for the Internet</a></h1>
+<p>Intermodal is a user-friendly and featureful command-line BitTorrent metainfo utility for Linux, Windows, and macOS.</p>
+<p>Project development is hosted on <a href="https://github.com/casey/intermodal">GitHub</a>.</p>
+<p>The binary is called <code>imdl</code>:</p>
+<pre><code class="language-sh">$ imdl --help
 </code></pre>
-<p>Print information about existing torrent files:</p>
-<pre><code>$ imdl torrent show --input foo.torrent
+<p>BitTorrent metainfo related functionality is under the <code>torrent</code> subcommand:</p>
+<pre><code class="language-sh">$ imdl torrent --help
+</code></pre>
+<p>Intermodal can be used to create <code>.torrent</code> files:</p>
+<pre><code class="language-sh">$ imdl torrent create --input foo
+</code></pre>
+<p>Print information about existing <code>.torrent</code> files:</p>
+<pre><code class="language-sh">$ imdl torrent show --input foo.torrent
 </code></pre>
 <p>Verify downloaded torrents:</p>
-<pre><code>$ imdl torrent verify --input foo.torrent --content foo
+<pre><code class="language-sh">$ imdl torrent verify --input foo.torrent --content foo
 </code></pre>
-<p>Generate magnet links from torrent files:</p>
-<pre><code>$ imdl torrent link --input foo.torrent
+<p>Generate magnet links from <code>.torrent</code> files:</p>
+<pre><code class="language-sh">$ imdl torrent link --input foo.torrent
+</code></pre>
+<p>Show infromation about the piece length picker:</p>
+<pre><code class="language-sh">$ imdl torrent piece-length
+</code></pre>
+<p>Print completion scripts for the <code>imdl</code> binary:</p>
+<pre><code class="language-sh">$ imdl completions --shell zsh
 </code></pre>
 <p>Functionality that is not yet finalized, but still available for preview, can be accessed with the <code>--unstable</code> flag:</p>
 <p>Print information about a collection of torrents:</p>
-<pre><code>$ imdl --unstable torrent stats --input dir
+<pre><code class="language-sh">$ imdl --unstable torrent stats --input dir
 </code></pre>
 <p>Happy sharing!</p>
 
@@ -175,7 +193,7 @@
                         
 
                         
-                            <a rel="next" href="bep-support.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="faq.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -189,7 +207,7 @@
                 
 
                 
-                    <a rel="next" href="bep-support.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="faq.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

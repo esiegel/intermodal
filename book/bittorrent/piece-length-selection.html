@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Piece Length Selection - Intermodal</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="../custom.css">
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../introduction.html">Intermodal</a></li><li class="chapter-item expanded "><a href="../faq.html"><strong aria-hidden="true">1.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="../commands.html"><strong aria-hidden="true">2.</strong> Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../commands/imdl.html"><strong aria-hidden="true">2.1.</strong> imdl</a></li><li class="chapter-item expanded "><a href="../commands/imdl-completions.html"><strong aria-hidden="true">2.2.</strong> imdl completions</a></li><li class="chapter-item expanded "><a href="../commands/imdl-torrent.html"><strong aria-hidden="true">2.3.</strong> imdl torrent</a></li><li class="chapter-item expanded "><a href="../commands/imdl-torrent-create.html"><strong aria-hidden="true">2.4.</strong> imdl torrent create</a></li><li class="chapter-item expanded "><a href="../commands/imdl-torrent-link.html"><strong aria-hidden="true">2.5.</strong> imdl torrent link</a></li><li class="chapter-item expanded "><a href="../commands/imdl-torrent-piece-length.html"><strong aria-hidden="true">2.6.</strong> imdl torrent piece-length</a></li><li class="chapter-item expanded "><a href="../commands/imdl-torrent-show.html"><strong aria-hidden="true">2.7.</strong> imdl torrent show</a></li><li class="chapter-item expanded "><a href="../commands/imdl-torrent-stats.html"><strong aria-hidden="true">2.8.</strong> imdl torrent stats</a></li><li class="chapter-item expanded "><a href="../commands/imdl-torrent-verify.html"><strong aria-hidden="true">2.9.</strong> imdl torrent verify</a></li></ol></li><li class="chapter-item expanded "><a href="../bittorrent.html"><strong aria-hidden="true">3.</strong> Bittorrent</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../bittorrent/piece-length-selection.html" class="active"><strong aria-hidden="true">3.1.</strong> Piece Length Selection</a></li><li class="chapter-item expanded "><a href="../bittorrent/bep-support.html"><strong aria-hidden="true">3.2.</strong> BEP Support</a></li><li class="chapter-item expanded "><a href="../bittorrent/metainfo-utilities.html"><strong aria-hidden="true">3.3.</strong> Metainfo Utilities</a></li><li class="chapter-item expanded "><a href="../bittorrent/distributing-large-data-sets.html"><strong aria-hidden="true">3.4.</strong> Distributing Large Data Sets</a></li><li class="chapter-item expanded "><a href="../bittorrent/udp-tracker-protocol.html"><strong aria-hidden="true">3.5.</strong> UDP Tracker Protocol</a></li></ol></li><li class="chapter-item expanded "><a href="../references.html"><strong aria-hidden="true">4.</strong> References</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../references/bittorrent.html"><strong aria-hidden="true">4.1.</strong> BitTorrent</a></li><li class="chapter-item expanded "><a href="../references/metadata.html"><strong aria-hidden="true">4.2.</strong> Metadata</a></li><li class="chapter-item expanded "><a href="../references/cryptography.html"><strong aria-hidden="true">4.3.</strong> Cryptography</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Intermodal</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        <a href="https://github.com/casey/intermodal" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#bittorrent-piece-length-selection" id="bittorrent-piece-length-selection">BitTorrent Piece Length Selection</a></h1>
+<p>BitTorrent <code>.torrent</code> files contain so-called metainfo that allows BitTorrent
+peers to locate, download, and verify the contents of a torrent.</p>
+<p>This metainfo includes the piece list, a list of SHA-1 hashes of fixed-size
+pieces of the torrent data. The size of these pieces is chosen by the torrent
+creator.</p>
+<p>Intermodal has a simple algorithm that attempts to pick a reasonable piece
+length for a torrent given the size of the contents.</p>
+<p>For compatibility with the
+<a href="http://bittorrent.org/beps/bep_0052.html">BitTorrent v2 specification</a>, the
+algorithm chooses piece lengths that are powers of two, and that are at least
+16KiB.</p>
+<p>The maximum automatically chosen piece length is 16MiB, as piece lengths larger
+than 16MiB have been reported to cause issues for some clients.</p>
+<p>In addition to the above constraints, there are a number of additional factors
+to consider.</p>
+<h2><a class="header" href="#factors-favoring-smaller-piece-length" id="factors-favoring-smaller-piece-length">Factors favoring smaller piece length</a></h2>
+<ul>
+<li>
+<p>To avoid uploading bad data, peers only upload data from full pieces, which
+can be verified by hash. Decreasing the piece size allows peers to more
+quickly obtain a full piece, which decreases the time before they begin
+uploading, and receiving data in return.</p>
+</li>
+<li>
+<p>Decreasing the piece size decreases the amount of data that must be thrown
+away in case of corruption.</p>
+</li>
+</ul>
+<h2><a class="header" href="#factors-favoring-larger-piece-length" id="factors-favoring-larger-piece-length">Factors favoring larger piece length</a></h2>
+<ul>
+<li>
+<p>Increasing the piece size decreases the protocol overhead from requesting
+many pieces.</p>
+</li>
+<li>
+<p>Increasing the piece size decreases the number of pieces, decreasing the
+size of the metainfo.</p>
+</li>
+<li>
+<p>Increasing piece length increases the proportion of disk seeks to disk
+reads, which can be beneficial for spinning disks.</p>
+</li>
+</ul>
+<h2><a class="header" href="#intermodals-algorithm" id="intermodals-algorithm">Intermodal’s Algorithm</a></h2>
+<p>In Python, the algorithm used by intermodal is:</p>
+<pre><code class="language-python">MIN = 16 * 1024
+MAX = 16 * 1024 * 1024
+
+def piece_length(content_length):
+  exponent = math.log2(content_length)
+  length = 1 &lt;&lt; int((exponent / 2 + 4))
+  return min(max(length, MIN), MAX)
+</code></pre>
+<p>Which gives the following piece lengths:</p>
+<pre><code>Content -&gt; Piece Length x Count    = Piece List Size
+16 KiB  -&gt; 16 KiB       x 1        = 20 bytes
+32 KiB  -&gt; 16 KiB       x 2        = 40 bytes
+64 KiB  -&gt; 16 KiB       x 4        = 80 bytes
+128 KiB -&gt; 16 KiB       x 8        = 160 bytes
+256 KiB -&gt; 16 KiB       x 16       = 320 bytes
+512 KiB -&gt; 16 KiB       x 32       = 640 bytes
+1 MiB   -&gt; 16 KiB       x 64       = 1.25 KiB
+2 MiB   -&gt; 16 KiB       x 128      = 2.5 KiB
+4 MiB   -&gt; 32 KiB       x 128      = 2.5 KiB
+8 MiB   -&gt; 32 KiB       x 256      = 5 KiB
+16 MiB  -&gt; 64 KiB       x 256      = 5 KiB
+32 MiB  -&gt; 64 KiB       x 512      = 10 KiB
+64 MiB  -&gt; 128 KiB      x 512      = 10 KiB
+128 MiB -&gt; 128 KiB      x 1024     = 20 KiB
+256 MiB -&gt; 256 KiB      x 1024     = 20 KiB
+512 MiB -&gt; 256 KiB      x 2048     = 40 KiB
+1 GiB   -&gt; 512 KiB      x 2048     = 40 KiB
+2 GiB   -&gt; 512 KiB      x 4096     = 80 KiB
+4 GiB   -&gt; 1 MiB        x 4096     = 80 KiB
+8 GiB   -&gt; 1 MiB        x 8192     = 160 KiB
+16 GiB  -&gt; 2 MiB        x 8192     = 160 KiB
+32 GiB  -&gt; 2 MiB        x 16384    = 320 KiB
+64 GiB  -&gt; 4 MiB        x 16384    = 320 KiB
+128 GiB -&gt; 4 MiB        x 32768    = 640 KiB
+256 GiB -&gt; 8 MiB        x 32768    = 640 KiB
+512 GiB -&gt; 8 MiB        x 65536    = 1.25 MiB
+1 TiB   -&gt; 16 MiB       x 65536    = 1.25 MiB
+2 TiB   -&gt; 16 MiB       x 131072   = 2.5 MiB
+4 TiB   -&gt; 16 MiB       x 262144   = 5 MiB
+8 TiB   -&gt; 16 MiB       x 524288   = 10 MiB
+16 TiB  -&gt; 16 MiB       x 1048576  = 20 MiB
+32 TiB  -&gt; 16 MiB       x 2097152  = 40 MiB
+64 TiB  -&gt; 16 MiB       x 4194304  = 80 MiB
+128 TiB -&gt; 16 MiB       x 8388608  = 160 MiB
+256 TiB -&gt; 16 MiB       x 16777216 = 320 MiB
+512 TiB -&gt; 16 MiB       x 33554432 = 640 MiB
+1 PiB   -&gt; 16 MiB       x 67108864 = 1.25 GiB
+</code></pre>
+<h2><a class="header" href="#references" id="references">References</a></h2>
+<h3><a class="header" href="#articles" id="articles">Articles</a></h3>
+<ul>
+<li>
+<p><a href="https://wiki.vuze.com/w/Torrent_Piece_Size">Vuze Wiki</a></p>
+</li>
+<li>
+<p><a href="https://torrentfreak.com/how-to-make-the-best-torrents-081121/">TorrentFreak</a></p>
+</li>
+</ul>
+<h3><a class="header" href="#implementations" id="implementations">Implementations</a></h3>
+<ul>
+<li>
+<p><a href="https://github.com/arvidn/libtorrent/blob/a3440e54bb7f65ac6100c3d993c53f887025d660/src/create_torrent.cpp#L367">libtorrent</a></p>
+</li>
+<li>
+<p><a href="https://github.com/transmission/transmission/blob/a482100f0cbae8050fd7e954af2cb1311205916e/libtransmission/makemeta.c#L89">libtransmission</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kz26/dottorrent/blob/fea5714efe0cde2a55eabfb387295781a78d84bb/dottorrent/__init__.py#L154">dottorrent</a></p>
+</li>
+<li>
+<p><a href="https://github.com/torrent-file-editor/torrent-file-editor/blob/811e401b38f26b6d94c4808c54ae2dcc7bbc27dd/mainwindow.cpp#L1210">Torrent File Editor</a></p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../bittorrent.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../bittorrent/bep-support.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../bittorrent.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../bittorrent/bep-support.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

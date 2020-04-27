@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="sidebar-visible no-js ayu">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>BitTorrent References - Intermodal</title>
+        <title>imdl torrent - Intermodal</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -11,23 +11,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="../custom.css">
         
 
         
@@ -35,8 +37,8 @@
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "ayu";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -62,7 +64,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('light')
+            html.classList.remove('ayu')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -80,8 +82,8 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
-                <ol class="chapter"><li class="expanded affix "><a href="introduction.html">Intermodal</a></li><li class="expanded "><a href="bep-support.html"><strong aria-hidden="true">1.</strong> BitTorrent BEP Support</a></li><li class="expanded "><a href="prior-art.html"><strong aria-hidden="true">2.</strong> Alternatives &amp; Prior Art</a></li><li class="expanded "><a href="bittorrent-references.html" class="active"><strong aria-hidden="true">3.</strong> BitTorrent References</a></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../introduction.html">Intermodal</a></li><li class="chapter-item expanded "><a href="../faq.html"><strong aria-hidden="true">1.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="../commands.html"><strong aria-hidden="true">2.</strong> Commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../commands/imdl.html"><strong aria-hidden="true">2.1.</strong> imdl</a></li><li class="chapter-item expanded "><a href="../commands/imdl-completions.html"><strong aria-hidden="true">2.2.</strong> imdl completions</a></li><li class="chapter-item expanded "><a href="../commands/imdl-torrent.html" class="active"><strong aria-hidden="true">2.3.</strong> imdl torrent</a></li><li class="chapter-item expanded "><a href="../commands/imdl-torrent-create.html"><strong aria-hidden="true">2.4.</strong> imdl torrent create</a></li><li class="chapter-item expanded "><a href="../commands/imdl-torrent-link.html"><strong aria-hidden="true">2.5.</strong> imdl torrent link</a></li><li class="chapter-item expanded "><a href="../commands/imdl-torrent-piece-length.html"><strong aria-hidden="true">2.6.</strong> imdl torrent piece-length</a></li><li class="chapter-item expanded "><a href="../commands/imdl-torrent-show.html"><strong aria-hidden="true">2.7.</strong> imdl torrent show</a></li><li class="chapter-item expanded "><a href="../commands/imdl-torrent-stats.html"><strong aria-hidden="true">2.8.</strong> imdl torrent stats</a></li><li class="chapter-item expanded "><a href="../commands/imdl-torrent-verify.html"><strong aria-hidden="true">2.9.</strong> imdl torrent verify</a></li></ol></li><li class="chapter-item expanded "><a href="../bittorrent.html"><strong aria-hidden="true">3.</strong> Bittorrent</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../bittorrent/piece-length-selection.html"><strong aria-hidden="true">3.1.</strong> Piece Length Selection</a></li><li class="chapter-item expanded "><a href="../bittorrent/bep-support.html"><strong aria-hidden="true">3.2.</strong> BEP Support</a></li><li class="chapter-item expanded "><a href="../bittorrent/metainfo-utilities.html"><strong aria-hidden="true">3.3.</strong> Metainfo Utilities</a></li><li class="chapter-item expanded "><a href="../bittorrent/distributing-large-data-sets.html"><strong aria-hidden="true">3.4.</strong> Distributing Large Data Sets</a></li><li class="chapter-item expanded "><a href="../bittorrent/udp-tracker-protocol.html"><strong aria-hidden="true">3.5.</strong> UDP Tracker Protocol</a></li></ol></li><li class="chapter-item expanded "><a href="../references.html"><strong aria-hidden="true">4.</strong> References</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../references/bittorrent.html"><strong aria-hidden="true">4.1.</strong> BitTorrent</a></li><li class="chapter-item expanded "><a href="../references/metadata.html"><strong aria-hidden="true">4.2.</strong> Metadata</a></li><li class="chapter-item expanded "><a href="../references/cryptography.html"><strong aria-hidden="true">4.3.</strong> Cryptography</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -100,11 +102,11 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
                         </ul>
                         
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
@@ -116,8 +118,12 @@
                     <h1 class="menu-title">Intermodal</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        <a href="https://github.com/casey/intermodal" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                         
                     </div>
@@ -147,25 +153,44 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h2><a class="header" href="#bittorrent-references" id="bittorrent-references">BitTorrent References</a></h2>
-<table><thead><tr><th align="left">URL</th><th align="left">Description</th></tr></thead><tbody>
-<tr><td align="left">https://github.com/bittorrent/bittorrent.org</td><td align="left">GitHub repository hosting protocol development discussion and contents of bittorrent.org.</td></tr>
-<tr><td align="left">https://www.bittorrent.org</td><td align="left">Official web site site hosting BEPs and other information about the protocol.</td></tr>
-<tr><td align="left">https://wiki.theory.org/index.php/Main_Page</td><td align="left">Wiki with lots of information about all aspects of the BitTorrent protocol and implementations.</td></tr>
-<tr><td align="left">https://archive.org/details/2014_torrent_archive_organized)</td><td align="left">Massive 158 GiB archive containing 5.5 million torrents, assembled in 2014.</td></tr>
-<tr><td align="left">https://github.com/internetarchive/dweb-transport</td><td align="left">Github repository hosting The Internet Archive's distributed web and BitTorrent-related software.</td></tr>
-</tbody></table>
+                        <h1><a class="header" href="#imdl-torrent" id="imdl-torrent"><code>imdl torrent</code></a></h1>
+<pre><code>imdl-torrent 0.1.7
+Subcommands related to the BitTorrent protocol.
+
+USAGE:
+    imdl torrent &lt;SUBCOMMAND&gt;
+
+FLAGS:
+    -h, --help       Print help message.
+    -V, --version    Print version number.
+
+SUBCOMMANDS:
+    create          Create a .torrent file.
+    help            Prints this message or the help of the given
+                    subcommand(s)
+    link            Generate a magnet link from a .torrent file.
+    piece-length    Display information about automatic piece length
+                    selection.
+    show            Display information about a .torrent file.
+    stats           Show statistics about a collection of .torrent files.
+    verify          Verify files against a .torrent file.
+
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="prior-art.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../commands/imdl-completions.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
+                        
+                            <a rel="next" href="../commands/imdl-torrent-create.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -175,11 +200,15 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="prior-art.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../commands/imdl-completions.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
+                
+                    <a rel="next" href="../commands/imdl-torrent-create.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 
             </nav>
 
@@ -200,14 +229,14 @@
         
 
         
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
         
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
         
